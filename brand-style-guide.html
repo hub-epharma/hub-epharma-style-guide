@@ -513,200 +513,301 @@
             }
             
             body {
-                font-size: 12pt;
-                line-height: 1.4;
+                font-size: 11pt;
+                line-height: 1.3;
                 color: #000;
                 background: white !important;
+                margin: 0;
+                padding: 0;
             }
             
             .container {
                 max-width: none;
                 margin: 0;
-                padding: 0;
+                padding: 0 15pt;
             }
             
             .header {
                 page-break-after: avoid;
                 border-bottom: 2px solid #000;
-                margin-bottom: 20pt;
-                padding-bottom: 10pt;
+                margin-bottom: 15pt;
+                padding: 15pt 0;
+                background: #2c3e50 !important;
+                color: white !important;
             }
             
             .section {
                 page-break-inside: avoid;
-                margin-bottom: 20pt;
+                margin-bottom: 15pt;
+                padding: 10pt 0;
             }
             
             h1 {
-                font-size: 24pt;
-                margin-bottom: 10pt;
+                font-size: 22pt;
+                margin-bottom: 8pt;
                 color: #000;
+                page-break-after: avoid;
             }
             
             h2 {
-                font-size: 18pt;
-                margin: 20pt 0 10pt 0;
+                font-size: 16pt;
+                margin: 15pt 0 8pt 0;
                 color: #000;
                 border-bottom: 1px solid #ccc;
-                padding-bottom: 5pt;
+                padding-bottom: 3pt;
+                page-break-after: avoid;
             }
             
             h3 {
-                font-size: 14pt;
-                margin: 15pt 0 8pt 0;
+                font-size: 13pt;
+                margin: 12pt 0 6pt 0;
                 color: #000;
+                page-break-after: avoid;
             }
             
             h4 {
-                font-size: 12pt;
-                margin: 10pt 0 5pt 0;
+                font-size: 11pt;
+                margin: 8pt 0 4pt 0;
                 color: #000;
+                page-break-after: avoid;
+            }
+            
+            p {
+                margin: 4pt 0;
+                orphans: 3;
+                widows: 3;
+            }
+            
+            ul, ol {
+                margin: 4pt 0;
+                padding-left: 15pt;
+            }
+            
+            li {
+                margin: 2pt 0;
             }
             
             .color-grid {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10pt;
-                margin: 10pt 0;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8pt;
+                margin: 8pt 0;
+                page-break-inside: avoid;
             }
             
             .color-swatch {
                 border: 1px solid #ccc;
-                border-radius: 4pt;
-                padding: 8pt;
+                border-radius: 3pt;
+                padding: 6pt;
                 text-align: center;
+                page-break-inside: avoid;
             }
             
             .color-preview {
-                height: 40pt;
-                border-radius: 4pt;
+                height: 30pt;
+                border-radius: 3pt;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-weight: bold;
-                margin-bottom: 5pt;
+                font-size: 9pt;
+                margin-bottom: 3pt;
             }
             
             .spacing-examples {
                 border: 1px solid #ccc;
-                border-radius: 4pt;
-                padding: 10pt;
+                border-radius: 3pt;
+                padding: 8pt;
                 background: #f9f9f9;
+                page-break-inside: avoid;
             }
             
             .spacing-example {
-                margin: 5pt 0;
+                margin: 3pt 0;
                 display: flex;
                 align-items: center;
-                gap: 10pt;
+                gap: 8pt;
+                font-size: 9pt;
             }
             
             .spacing-visual {
                 background: #27ae60;
-                min-width: 20pt;
+                min-width: 15pt;
                 border: 1px solid #27ae60;
             }
             
             .radius-examples {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 10pt;
-                margin: 10pt 0;
+                gap: 8pt;
+                margin: 8pt 0;
+                page-break-inside: avoid;
             }
             
             .radius-example {
                 border: 1px solid #ccc;
-                padding: 10pt;
+                padding: 8pt;
                 text-align: center;
                 background: #f0f0f0;
+                font-size: 9pt;
             }
             
             .logo-showcase {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15pt;
-                margin: 10pt 0;
+                gap: 12pt;
+                margin: 8pt 0;
+                page-break-inside: avoid;
             }
             
             .logo-example {
                 border: 1px solid #ccc;
-                border-radius: 4pt;
-                padding: 10pt;
+                border-radius: 3pt;
+                padding: 8pt;
                 text-align: center;
+                page-break-inside: avoid;
             }
             
             .logo-example img {
                 max-width: 100%;
                 height: auto;
-                margin-bottom: 5pt;
+                margin-bottom: 3pt;
             }
             
-            .components-grid {
+            .component-grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 10pt;
-                margin: 10pt 0;
+                gap: 8pt;
+                margin: 8pt 0;
+                page-break-inside: avoid;
             }
             
             .component-example {
                 border: 1px solid #ccc;
-                border-radius: 4pt;
-                padding: 10pt;
+                border-radius: 3pt;
+                padding: 8pt;
                 text-align: center;
+                page-break-inside: avoid;
             }
             
             .icon-grid {
                 display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                gap: 8pt;
-                margin: 10pt 0;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 6pt;
+                margin: 8pt 0;
+                page-break-inside: avoid;
             }
             
             .icon-example {
                 border: 1px solid #ccc;
-                border-radius: 4pt;
-                padding: 8pt;
+                border-radius: 3pt;
+                padding: 6pt;
                 text-align: center;
                 background: #f9f9f9;
+                font-size: 9pt;
             }
             
-            .code-tokens-table {
+            .tokens-table {
                 width: 100%;
                 border-collapse: collapse;
-                margin: 10pt 0;
-                font-size: 10pt;
+                margin: 8pt 0;
+                font-size: 9pt;
+                page-break-inside: avoid;
             }
             
-            .code-tokens-table th,
-            .code-tokens-table td {
+            .tokens-table th,
+            .tokens-table td {
                 border: 1px solid #ccc;
-                padding: 6pt;
+                padding: 4pt;
                 text-align: left;
             }
             
-            .code-tokens-table th {
+            .tokens-table th {
                 background: #f0f0f0;
                 font-weight: bold;
             }
             
-            .copy-button {
+            .copy-btn {
                 display: none;
             }
             
             .brand-personality {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 10pt;
-                margin: 10pt 0;
+                gap: 8pt;
+                margin: 8pt 0;
+                page-break-inside: avoid;
             }
             
             .personality-item {
                 border: 1px solid #ccc;
-                border-radius: 4pt;
-                padding: 10pt;
+                border-radius: 3pt;
+                padding: 8pt;
                 text-align: center;
                 background: #f9f9f9;
             }
+            
+            /* AI Prompts Section Print Styles */
+            .ai-prompts-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10pt;
+                margin: 8pt 0;
+            }
+            
+            .ai-prompt-card {
+                border: 1px solid #ccc;
+                border-radius: 3pt;
+                padding: 8pt;
+                background: #f9f9f9;
+                page-break-inside: avoid;
+                margin-bottom: 8pt;
+            }
+            
+            .ai-prompt-code {
+                font-family: 'Courier New', monospace;
+                font-size: 8pt;
+                background: #f0f0f0;
+                padding: 6pt;
+                border-radius: 2pt;
+                border-left: 3pt solid #27ae60;
+                margin: 4pt 0;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+            
+            .ai-color-palette {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6pt;
+                margin: 6pt 0;
+            }
+            
+            .ai-color-item {
+                text-align: center;
+                font-size: 8pt;
+            }
+            
+            .ai-color-swatch {
+                width: 25pt;
+                height: 25pt;
+                border-radius: 2pt;
+                margin: 0 auto 2pt;
+                border: 1px solid #ccc;
+            }
+            
+            /* Ensure proper page breaks for major sections */
+            .section:nth-of-type(1) { page-break-before: avoid; }
+            .section:nth-of-type(2) { page-break-before: avoid; }
+            .section:nth-of-type(3) { page-break-before: avoid; }
+            .section:nth-of-type(4) { page-break-before: avoid; }
+            .section:nth-of-type(5) { page-break-before: avoid; }
+            .section:nth-of-type(6) { page-break-before: avoid; }
+            .section:nth-of-type(7) { page-break-before: avoid; }
+            .section:nth-of-type(8) { page-break-before: avoid; }
+            .section:nth-of-type(9) { page-break-before: avoid; }
+            .section:nth-of-type(10) { page-break-before: avoid; }
+            .section:nth-of-type(11) { page-break-before: avoid; }
         }
     </style>
 </head>
@@ -790,49 +891,49 @@
                     <div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid var(--border-color);">
                         <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
-                    <p><strong>Primary Logo</strong><br>Min size: 120px width</p>
+                    <p><strong>Primary Logo</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #ffffff; border-radius: var(--radius-sm); border: 1px solid #ccc;"></div><span>Background: #ffffff (White)</span></div>Min size: 120px width</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: var(--bg-dark); padding: 30px; border-radius: 8px;">
                         <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
-                    <p><strong>On Dark Background</strong><br>Use original version</p>
+                    <p><strong>On Dark Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #2c3e50; border-radius: var(--radius-sm);"></div><span>Background: #2c3e50 (Dark Blue-Gray)</span></div>Use original version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: var(--brand-primary); padding: 30px; border-radius: 8px;">
                         <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
                     </div>
-                    <p><strong>On Brand Background</strong><br>Use white version</p>
+                    <p><strong>On Brand Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #27ae60; border-radius: var(--radius-sm);"></div><span>Background: #27ae60 (Primary Green)</span></div>Use white version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #000000; padding: 30px; border-radius: 8px;">
                         <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
-                    <p><strong>On Black Background</strong><br>Use original version</p>
+                    <p><strong>On Black Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #000000; border-radius: var(--radius-sm);"></div><span>Background: #000000 (Black)</span></div>Use original version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: linear-gradient(135deg, #2c3e50, #27ae60); padding: 30px; border-radius: 8px;">
                         <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
                     </div>
-                    <p><strong>On Gradient Background</strong><br>Use white version</p>
+                    <p><strong>On Gradient Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: linear-gradient(135deg, #2c3e50, #27ae60); border-radius: var(--radius-sm);"></div><span>Background: #2c3e50 → #27ae60 (Gradient)</span></div>Use white version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 2px solid var(--brand-primary);">
                         <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
-                    <p><strong>On Light Background with Border</strong><br>Use white text version</p>
+                    <p><strong>On Light Background with Border</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #f8f9fa; border-radius: var(--radius-sm); border: 1px solid #ccc;"></div><span>Background: #f8f9fa (Light Gray)</span></div>Use white text version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #d35400; padding: 30px; border-radius: 8px;">
                         <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
-                    <p><strong>On Dark Orange Background</strong><br>Use original version</p>
+                    <p><strong>On Dark Orange Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #d35400; border-radius: var(--radius-sm);"></div><span>Background: #d35400 (Dark Orange)</span></div>Use original version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #2c3e50; padding: 30px; border-radius: 8px;">
                         <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
                     </div>
-                    <p><strong>On Dark Blue-Gray Background</strong><br>Use white logo</p>
+                    <p><strong>On Dark Blue-Gray Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #2c3e50; border-radius: var(--radius-sm);"></div><span>Background: #2c3e50 (Dark Blue-Gray)</span></div>Use white logo</p>
                 </div>
             </div>
             <div style="margin-top: var(--spacing-lg);">
@@ -1202,7 +1303,7 @@
                         Hero Banner
                     </div>
                     <h4>Hero Images</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">20px radius, large shadows</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">20px radius, large shadows<br><strong>Colors:</strong> #27ae60 → #2c3e50</p>
                 </div>
                 
                 <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
@@ -1210,7 +1311,7 @@
                         App Screenshot
                     </div>
                     <h4>App Screenshots</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">20px radius, drop shadows</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">20px radius, drop shadows<br><strong>Colors:</strong> #409eff → #1677ff</p>
                 </div>
                 
                 <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
@@ -1218,7 +1319,7 @@
                         Feature Image
                     </div>
                     <h4>Feature Images</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">12px radius, medium shadows</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">12px radius, medium shadows<br><strong>Colors:</strong> #f5f5f5 → #e8e8e8</p>
                 </div>
                 
                 <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
@@ -1226,7 +1327,7 @@
                         Dark Gradient
                     </div>
                     <h4>Dark Gradient</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Professional dark gradient for cards</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Professional dark gradient for cards<br><strong>Colors:</strong> #5d6d7e → #566573 → #4a5a6a</p>
                 </div>
                 
                 <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
@@ -1242,7 +1343,7 @@
                         Login Page Gradient
                     </div>
                     <h4>Login Page Gradient</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Animated dark gradient with teal accent</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Animated dark gradient with teal accent<br><strong>Colors:</strong> #000000 → #0a0a0a → rgba(64,109,112,143) → #000000</p>
                 </div>
                 
                 <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
@@ -1250,7 +1351,7 @@
                         Sidebar Gradient
                     </div>
                     <h4>Sidebar Gradient</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Vertical dark gradient for navigation</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Vertical dark gradient for navigation<br><strong>Colors:</strong> #000000 (0%) → #0a0a0a (75%) → rgba(64,109,112,143) (100%)</p>
                 </div>
             </div>
 
@@ -1359,44 +1460,44 @@
             <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">Use these detailed prompts when creating visuals with AI tools to ensure brand consistency and proper color alignment across all platforms.</p>
             
             <h3>Brand Color Palette for AI Reference</h3>
-            <div style="background: var(--bg-secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-xl);">
+            <div class="ai-color-palette" style="background: var(--bg-secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-xl);">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
-                    <div style="text-align: center;">
-                        <div style="width: 40px; height: 40px; background: #27ae60; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                    <div class="ai-color-item" style="text-align: center;">
+                        <div class="ai-color-swatch" style="width: 40px; height: 40px; background: #27ae60; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
                         <strong>Primary Green</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#27ae60</span>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 40px; height: 40px; background: #1e8449; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                    <div class="ai-color-item" style="text-align: center;">
+                        <div class="ai-color-swatch" style="width: 40px; height: 40px; background: #1e8449; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
                         <strong>Primary Dark</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#1e8449</span>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 40px; height: 40px; background: #2c3e50; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                    <div class="ai-color-item" style="text-align: center;">
+                        <div class="ai-color-swatch" style="width: 40px; height: 40px; background: #2c3e50; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
                         <strong>Secondary Blue</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#2c3e50</span>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 40px; height: 40px; background: #3498db; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                    <div class="ai-color-item" style="text-align: center;">
+                        <div class="ai-color-swatch" style="width: 40px; height: 40px; background: #3498db; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
                         <strong>Accent Blue</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#3498db</span>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 40px; height: 40px; background: #4caf50; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                    <div class="ai-color-item" style="text-align: center;">
+                        <div class="ai-color-swatch" style="width: 40px; height: 40px; background: #4caf50; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
                         <strong>Success Green</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#4caf50</span>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 40px; height: 40px; background: #95a5a6; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                    <div class="ai-color-item" style="text-align: center;">
+                        <div class="ai-color-swatch" style="width: 40px; height: 40px; background: #95a5a6; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
                         <strong>Muted Gray</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#95a5a6</span>
                     </div>
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-xl);">
+            <div class="ai-prompts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-xl);">
                 
                 <!-- Flyers & Marketing Materials -->
-                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                <div class="ai-prompt-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
                     <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📄 Flyers & Marketing Materials</h4>
                     <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
                         <strong>Prompt Template:</strong>
                     </div>
-                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <div class="ai-prompt-code" style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
                         Create a [VISUAL_TYPE] for Hub E-Pharma, a digital pharmacy platform in West Africa. Use a modern, professional healthcare design with these exact brand colors: primary green #27ae60, secondary blue #2c3e50, accent blue #3498db, and success green #4caf50. Include clean typography (Inter font family), rounded corners (8-20px radius), and subtle shadows. The design should convey trust, innovation, and healthcare accessibility. [SPECIFIC_REQUIREMENTS]
                     </div>
                     <div style="margin-top: var(--spacing-md);">
@@ -1410,12 +1511,12 @@
                 </div>
 
                 <!-- Social Media Graphics -->
-                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                <div class="ai-prompt-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
                     <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📱 Social Media Graphics</h4>
                     <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
                         <strong>Prompt Template:</strong>
                     </div>
-                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <div class="ai-prompt-code" style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
                         Create a [PLATFORM] social media post for Hub E-Pharma. Use a vibrant, engaging design with brand colors: #27ae60 (primary green), #2c3e50 (secondary blue), #3498db (accent blue). Include the Hub E-Pharma logo, modern healthcare icons, and clean typography. The design should be mobile-optimized with proper spacing and contrast. [PLATFORM_SPECIFICS]
                     </div>
                     <div style="margin-top: var(--spacing-md);">
@@ -1429,12 +1530,12 @@
                 </div>
 
                 <!-- Website Banners -->
-                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                <div class="ai-prompt-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
                     <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">🌐 Website Banners & Hero Images</h4>
                     <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
                         <strong>Prompt Template:</strong>
                     </div>
-                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <div class="ai-prompt-code" style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
                         Create a website hero banner (1920x1080px) for Hub E-Pharma. Use a professional gradient background combining #27ae60 and #2c3e50, with clean white text overlay. Include modern healthcare elements, pharmacy icons, and the Hub E-Pharma logo. Apply 20px border radius and subtle shadow effects. The design should be responsive-friendly with clear hierarchy and strong visual impact.
                     </div>
                     <div style="margin-top: var(--spacing-md);">
@@ -1448,12 +1549,12 @@
                 </div>
 
                 <!-- Mobile App Screenshots -->
-                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                <div class="ai-prompt-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
                     <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📱 Mobile App Screenshots</h4>
                     <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
                         <strong>Prompt Template:</strong>
                     </div>
-                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <div class="ai-prompt-code" style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
                         Create a mobile app screenshot mockup for Hub E-Pharma pharmacy management app. Use the mobile app color scheme: #27ae60 (primary), #1e8449 (primary dark), #28a745 (secondary), #4caf50 (accent). Design a clean, modern interface with proper spacing, rounded corners (8-12px), and the app's navigation elements. Include realistic content and maintain the healthcare/pharmacy theme throughout.
                     </div>
                     <div style="margin-top: var(--spacing-md);">
@@ -1467,12 +1568,12 @@
                 </div>
 
                 <!-- Presentation Slides -->
-                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                <div class="ai-prompt-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
                     <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📊 Presentation Slides</h4>
                     <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
                         <strong>Prompt Template:</strong>
                     </div>
-                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <div class="ai-prompt-code" style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
                         Create a presentation slide (16:9 ratio) for Hub E-Pharma. Use a clean, professional design with brand colors: #27ae60, #2c3e50, #3498db. Include the Hub E-Pharma logo, consistent typography (Inter font), and healthcare-related icons. Use subtle gradients and proper spacing. The slide should be readable from a distance and maintain brand consistency.
                     </div>
                     <div style="margin-top: var(--spacing-md);">
@@ -1486,12 +1587,12 @@
                 </div>
 
                 <!-- Email Templates -->
-                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                <div class="ai-prompt-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
                     <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📧 Email Templates</h4>
                     <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
                         <strong>Prompt Template:</strong>
                     </div>
-                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <div class="ai-prompt-code" style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
                         Create an email template header/banner for Hub E-Pharma. Use brand colors #27ae60, #2c3e50, and #3498db in a professional layout. Include the Hub E-Pharma logo, clean typography, and healthcare elements. Design should be email-client compatible with proper fallbacks and mobile responsiveness. Use subtle gradients and maintain consistent spacing.
                     </div>
                     <div style="margin-top: var(--spacing-md);">

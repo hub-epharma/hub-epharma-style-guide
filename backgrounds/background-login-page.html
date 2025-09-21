@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Background - Hub E-Pharma</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(-45deg, #000000, #0a0a0a, rgba(64,109,112,143), #000000);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Animated gradient keyframes */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        /* Login page container - matching example dimensions */
+        .login-container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: linear-gradient(-45deg, #000000, #0a0a0a, rgba(64,109,112,143), #000000);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .login-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Teal accent overlay */
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(64, 109, 112, 0.3), transparent 50%);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+        
+        /* Animated shimmer effect */
+        .login-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+            border-radius: 20px;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            50% {
+                transform: translateX(0%) translateY(0%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+        
+        /* Specifications display - outside container */
+        .specs {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: white;
+            max-width: 250px;
+            z-index: 1000;
+        }
+        
+        /* Header text */
+        .header-text {
+            color: white;
+            font-weight: 600;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                animation: none;
+            }
+            .login-container {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                page-break-after: always;
+                animation: none;
+            }
+            .specs {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header-text">Login Page Gradient</h1>
+    <div class="login-container">
+    </div>
+    <div class="specs">
+        <strong>Login Page Specs:</strong><br>
+        Colors: #000000 → #0a0a0a → rgba(64,109,112,143) → #000000<br>
+        Border radius: 20px<br>
+        Shadow: 0 20px 60px rgba(0,0,0,0.15)<br>
+        Animated dark gradient with teal accent
+    </div>
+</body>
+</html>

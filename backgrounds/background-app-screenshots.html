@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Screenshots Background - Hub E-Pharma</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #409eff, #1677ff);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* App screenshot container - matching example dimensions */
+        .screenshot-container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #409eff, #1677ff);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+            position: relative;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        .screenshot-container:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+        }
+        
+        /* Mobile overlay effect */
+        .screenshot-container::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+        
+        /* Specifications display - outside container */
+        .specs {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: white;
+            max-width: 250px;
+            z-index: 1000;
+        }
+        
+        /* Header text */
+        .header-text {
+            color: white;
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .screenshot-container {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                page-break-after: always;
+            }
+            .specs {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header-text">App Screenshot</h1>
+    <div class="screenshot-container">
+    </div>
+    <div class="specs">
+        <strong>App Screenshots Specs:</strong><br>
+        Colors: #409eff → #1677ff<br>
+        Border radius: 20px<br>
+        Drop shadow: 0 10px 20px rgba(0,0,0,0.1)<br>
+        Format: PNG, WebP<br>
+        Resolution: 600x400px
+    </div>
+</body>
+</html>
