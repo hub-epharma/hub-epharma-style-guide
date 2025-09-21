@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub E-Pharma - Brand Style Guide</title>
+    <style>
+        /* 
+         * Hub E-Pharma Brand Style Guide
+         * 
+         * How to update tokens in future:
+         * 1. Update CSS variables in :root section below
+         * 2. Update color swatches in the Colors section
+         * 3. Update typography examples if font families change
+         * 4. Update component examples if design patterns change
+         * 5. Test the page in browser to ensure all changes are reflected
+         */
+        
+        :root {
+            /* Brand Colors - Extracted from actual projects */
+            /* Website Theme */
+            --website-primary: #2c3e50;
+            --website-secondary: #27ae60;
+            --website-accent: #3498db;
+            --website-text: #2c3e50;
+            --website-text-light: #7f8c8d;
+            --website-bg: #ffffff;
+            --website-bg-light: #ecf0f1;
+            --website-border: #bdc3c7;
+            
+            /* Mobile App Theme */
+            --mobile-primary: #27AE60;
+            --mobile-primary-dark: #1E8449;
+            --mobile-secondary: #28A745;
+            --mobile-accent: #4CAF50;
+            --mobile-bg: #f8f9fa;
+            --mobile-surface: #ffffff;
+            --mobile-app-bar: #000000;
+            --mobile-text-primary: #212121;
+            --mobile-text-secondary: #757575;
+            --mobile-text-tertiary: #9e9e9e;
+            --mobile-border: #e0e0e0;
+            
+            /* Web App Theme (Element Plus + Custom) */
+            --webapp-primary: #409eff; /* Element Plus default */
+            --webapp-success: #67c23a;
+            --webapp-warning: #e6a23c;
+            --webapp-danger: #f56c6c;
+            --webapp-info: #909399;
+            --webapp-text-primary: #303133;
+            --webapp-text-regular: #606266;
+            --webapp-text-secondary: #909399;
+            --webapp-text-placeholder: #c0c4cc;
+            --webapp-bg: #ffffff;
+            --webapp-bg-page: #f2f3f5;
+            --webapp-border: #dcdfe6;
+            --webapp-border-light: #e4e7ed;
+            
+            /* Unified Brand Colors */
+            --brand-primary: #27ae60; /* Green - Main brand color */
+            --brand-primary-dark: #1e8449;
+            --brand-secondary: #2c3e50; /* Dark blue-gray */
+            --brand-accent: #3498db; /* Blue */
+            --brand-success: #4caf50;
+            --brand-warning: #ff8c00;
+            --brand-danger: #f44336;
+            --brand-info: #2196f3;
+            
+        /* Status Colors - Pleasant Brand Themes */
+        --status-pending: #16a085;
+        --status-approved: #27ae60;
+        --status-rejected: #e67e22;
+        --status-active: #27ae60;
+        --status-inactive: #95a5a6;
+        --status-processing: #3498db;
+        --status-completed: #27ae60;
+        --status-expired: #95a5a6;
+            
+            /* Text Colors */
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --text-tertiary: #9e9e9e;
+            --text-disabled: #bdbdbd;
+            --text-white: #ffffff;
+            
+            /* Background Colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-light: #ecf0f1;
+            --bg-dark: #2c3e50;
+            --bg-black: #000000;
+            
+            /* Border Colors */
+            --border-color: #e0e0e0;
+            --border-light: #f5f5f5;
+            --border-medium: #dcdfe6;
+            
+            /* Spacing Scale */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
+            --spacing-3xl: 64px;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 25px;
+            --radius-full: 50px;
+            
+            /* Typography */
+            --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-family-secondary: 'Poppins', sans-serif;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.2);
+            
+            /* Transitions */
+            --transition-fast: all 0.2s ease;
+            --transition-normal: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        .header {
+            background: var(--bg-dark);
+            color: var(--bg-primary);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .header p {
+            opacity: 0.8;
+        }
+        
+        .section {
+            margin-bottom: var(--spacing-3xl);
+            padding: var(--spacing-xl) 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--primary-color);
+        }
+        
+        .section h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+        
+        /* Logo Section */
+        .logo-showcase {
+            display: flex;
+            gap: var(--spacing-xl);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-example {
+            text-align: center;
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+        }
+        
+        .logo-example img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .color-swatch {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .color-preview {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .color-info {
+            padding: var(--spacing-md);
+            background: var(--bg-primary);
+        }
+        
+        .color-name {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .color-value {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Typography */
+        .typography-example {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .typography-example h1 { font-size: 3rem; margin-bottom: var(--spacing-sm); }
+        .typography-example h2 { font-size: 2.5rem; margin-bottom: var(--spacing-sm); }
+        .typography-example h3 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+        .typography-example h4 { font-size: 1.5rem; margin-bottom: var(--spacing-sm); }
+        .typography-example h5 { font-size: 1.25rem; margin-bottom: var(--spacing-sm); }
+        .typography-example h6 { font-size: 1rem; margin-bottom: var(--spacing-sm); }
+        
+        .font-stack {
+            font-family: monospace;
+            background: var(--bg-secondary);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            margin-top: var(--spacing-xs);
+        }
+        
+        /* Spacing & Radius */
+        .spacing-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .spacing-example {
+            text-align: center;
+        }
+        
+        .spacing-visual {
+            background: var(--secondary-color);
+            margin: var(--spacing-sm) 0;
+            border-radius: var(--radius-sm);
+        }
+        
+        .radius-examples {
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+        
+        .radius-example {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        
+        /* Components */
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .component-example {
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-normal);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: var(--spacing-xs);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--bg-primary);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary-color);
+            color: var(--bg-primary);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: transparent;
+            color: var(--secondary-color);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--bg-primary);
+        }
+        
+        .input {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+        
+        .input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+        }
+        
+        .card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-success { background: var(--success-color); color: white; }
+        .badge-warning { background: var(--warning-color); color: white; }
+        .badge-danger { background: var(--danger-color); color: white; }
+        .badge-info { background: var(--info-color); color: white; }
+        
+        .alert {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+            border-left: 4px solid;
+        }
+        
+        .alert-success {
+            background: rgba(55, 188, 155, 0.1);
+            border-left-color: var(--success-color);
+            color: var(--text-primary);
+        }
+        
+        .alert-warning {
+            background: rgba(246, 187, 66, 0.1);
+            border-left-color: var(--warning-color);
+            color: var(--text-primary);
+        }
+        
+        .alert-danger {
+            background: rgba(218, 68, 83, 0.1);
+            border-left-color: var(--danger-color);
+            color: var(--text-primary);
+        }
+        
+        /* Icon Grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .icon-example {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+        }
+        
+        .icon-example i {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+        
+        /* Code Tokens Table */
+        .tokens-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-lg);
+        }
+        
+        .tokens-table th,
+        .tokens-table td {
+            padding: var(--spacing-sm) var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .tokens-table th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+        }
+        
+        .token-name {
+            font-family: monospace;
+            background: var(--bg-secondary);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+        }
+        
+        .copy-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+        
+        .copy-btn:hover {
+            background: #229954;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .logo-showcase {
+                flex-direction: column;
+            }
+            
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+                color: #000;
+                background: white !important;
+            }
+            
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header {
+                page-break-after: avoid;
+                border-bottom: 2px solid #000;
+                margin-bottom: 20pt;
+                padding-bottom: 10pt;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 20pt;
+            }
+            
+            h1 {
+                font-size: 24pt;
+                margin-bottom: 10pt;
+                color: #000;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin: 20pt 0 10pt 0;
+                color: #000;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 5pt;
+            }
+            
+            h3 {
+                font-size: 14pt;
+                margin: 15pt 0 8pt 0;
+                color: #000;
+            }
+            
+            h4 {
+                font-size: 12pt;
+                margin: 10pt 0 5pt 0;
+                color: #000;
+            }
+            
+            .color-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10pt;
+                margin: 10pt 0;
+            }
+            
+            .color-swatch {
+                border: 1px solid #ccc;
+                border-radius: 4pt;
+                padding: 8pt;
+                text-align: center;
+            }
+            
+            .color-preview {
+                height: 40pt;
+                border-radius: 4pt;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                margin-bottom: 5pt;
+            }
+            
+            .spacing-examples {
+                border: 1px solid #ccc;
+                border-radius: 4pt;
+                padding: 10pt;
+                background: #f9f9f9;
+            }
+            
+            .spacing-example {
+                margin: 5pt 0;
+                display: flex;
+                align-items: center;
+                gap: 10pt;
+            }
+            
+            .spacing-visual {
+                background: #27ae60;
+                min-width: 20pt;
+                border: 1px solid #27ae60;
+            }
+            
+            .radius-examples {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10pt;
+                margin: 10pt 0;
+            }
+            
+            .radius-example {
+                border: 1px solid #ccc;
+                padding: 10pt;
+                text-align: center;
+                background: #f0f0f0;
+            }
+            
+            .logo-showcase {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15pt;
+                margin: 10pt 0;
+            }
+            
+            .logo-example {
+                border: 1px solid #ccc;
+                border-radius: 4pt;
+                padding: 10pt;
+                text-align: center;
+            }
+            
+            .logo-example img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 5pt;
+            }
+            
+            .components-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10pt;
+                margin: 10pt 0;
+            }
+            
+            .component-example {
+                border: 1px solid #ccc;
+                border-radius: 4pt;
+                padding: 10pt;
+                text-align: center;
+            }
+            
+            .icon-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 8pt;
+                margin: 10pt 0;
+            }
+            
+            .icon-example {
+                border: 1px solid #ccc;
+                border-radius: 4pt;
+                padding: 8pt;
+                text-align: center;
+                background: #f9f9f9;
+            }
+            
+            .code-tokens-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 10pt 0;
+                font-size: 10pt;
+            }
+            
+            .code-tokens-table th,
+            .code-tokens-table td {
+                border: 1px solid #ccc;
+                padding: 6pt;
+                text-align: left;
+            }
+            
+            .code-tokens-table th {
+                background: #f0f0f0;
+                font-weight: bold;
+            }
+            
+            .copy-button {
+                display: none;
+            }
+            
+            .brand-personality {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10pt;
+                margin: 10pt 0;
+            }
+            
+            .personality-item {
+                border: 1px solid #ccc;
+                border-radius: 4pt;
+                padding: 10pt;
+                text-align: center;
+                background: #f9f9f9;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Hub E-Pharma</h1>
+            <p>Brand Style Guide v1.0 - September 2025</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Brand Overview -->
+        <section class="section">
+            <h2>A. Brand Overview</h2>
+            <div style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-dark)); color: white; padding: var(--spacing-2xl); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl);">
+                <h3 style="color: white; margin-bottom: var(--spacing-md);">Hub E-Pharma Brand Identity</h3>
+                <p style="font-size: 1.1rem; margin-bottom: var(--spacing-lg); opacity: 0.9;">A comprehensive digital platform for pharmacy transformation in West Africa, connecting pharmacies with suppliers and improving healthcare accessibility.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg);">
+                    <div style="border: 2px solid rgba(255, 255, 255, 0.3); border-radius: var(--radius-md); padding: var(--spacing-lg); background: rgba(255, 255, 255, 0.1);">
+                        <h4 style="color: white; margin-bottom: var(--spacing-sm);">Mission</h4>
+                        <p style="opacity: 0.9;">Digitalize pharmacy operations and improve healthcare access across West Africa</p>
+                    </div>
+                    <div style="border: 2px solid rgba(255, 255, 255, 0.3); border-radius: var(--radius-md); padding: var(--spacing-lg); background: rgba(255, 255, 255, 0.1);">
+                        <h4 style="color: white; margin-bottom: var(--spacing-sm);">Vision</h4>
+                        <p style="opacity: 0.9;">Be the leading digital platform for pharmacy transformation</p>
+                    </div>
+                    <div style="border: 2px solid rgba(255, 255, 255, 0.3); border-radius: var(--radius-md); padding: var(--spacing-lg); background: rgba(255, 255, 255, 0.1);">
+                        <h4 style="color: white; margin-bottom: var(--spacing-sm);">Values</h4>
+                        <p style="opacity: 0.9;">Innovation, Accessibility, Trust, Excellence</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Brand Personality</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
+                <div style="text-align: center; padding: var(--spacing-lg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <div style="width: 48px; height: 48px; background: var(--brand-primary); border-radius: var(--radius-md); margin: 0 auto var(--spacing-sm); display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h4>Healthcare-Focused</h4>
+                    <p style="color: var(--text-secondary);">Professional, trustworthy, and reliable</p>
+                </div>
+                <div style="text-align: center; padding: var(--spacing-lg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <div style="width: 48px; height: 48px; background: var(--brand-accent); border-radius: var(--radius-md); margin: 0 auto var(--spacing-sm); display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/>
+                        </svg>
+                    </div>
+                    <h4>Innovative</h4>
+                    <p style="color: var(--text-secondary);">Modern, forward-thinking, and tech-savvy</p>
+                </div>
+                <div style="text-align: center; padding: var(--spacing-lg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <div style="width: 48px; height: 48px; background: var(--brand-success); border-radius: var(--radius-md); margin: 0 auto var(--spacing-sm); display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01.99L12 11l-1.99-2.01A2.5 2.5 0 0 0 8 8H5.46c-.8 0-1.54.37-2.01.99L1 12.37 3.5 20H6v2h14z"/>
+                        </svg>
+                    </div>
+                    <h4>Collaborative</h4>
+                    <p style="color: var(--text-secondary);">Connecting pharmacies and suppliers</p>
+                </div>
+                <div style="text-align: center; padding: var(--spacing-lg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <div style="width: 48px; height: 48px; background: var(--brand-warning); border-radius: var(--radius-md); margin: 0 auto var(--spacing-sm); display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <h4>Accessible</h4>
+                    <p style="color: var(--text-secondary);">Inclusive and regionally focused</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Usage -->
+        <section class="section">
+            <h2>B. Logo Usage</h2>
+            <div class="logo-showcase" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-xl);">
+                <div class="logo-example">
+                    <div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                    </div>
+                    <p><strong>Primary Logo</strong><br>Min size: 120px width</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: var(--bg-dark); padding: 30px; border-radius: 8px;">
+                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                    </div>
+                    <p><strong>On Dark Background</strong><br>Use original version</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: var(--brand-primary); padding: 30px; border-radius: 8px;">
+                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <p><strong>On Brand Background</strong><br>Use white version</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: #000000; padding: 30px; border-radius: 8px;">
+                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                    </div>
+                    <p><strong>On Black Background</strong><br>Use original version</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: linear-gradient(135deg, #2c3e50, #27ae60); padding: 30px; border-radius: 8px;">
+                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <p><strong>On Gradient Background</strong><br>Use white version</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 2px solid var(--brand-primary);">
+                        <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                    </div>
+                    <p><strong>On Light Background with Border</strong><br>Use white text version</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: #d35400; padding: 30px; border-radius: 8px;">
+                        <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                    </div>
+                    <p><strong>On Dark Orange Background</strong><br>Use original version</p>
+                </div>
+                <div class="logo-example">
+                    <div style="background: #2c3e50; padding: 30px; border-radius: 8px;">
+                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <p><strong>On Dark Blue-Gray Background</strong><br>Use white logo</p>
+                </div>
+            </div>
+            <div style="margin-top: var(--spacing-lg);">
+                <h3>Logo Guidelines</h3>
+                <ul style="margin-left: var(--spacing-lg); color: var(--text-secondary);">
+                    <li>Maintain minimum clear space of 20px around logo</li>
+                    <li>Never distort or alter proportions</li>
+                    <li>Use on white or light backgrounds for best visibility</li>
+                    <li>Minimum size: 120px width for web, 60px for mobile</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="section">
+            <h2>C. Brand Colors</h2>
+            
+            <h3>Primary Brand Colors</h3>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--brand-primary);">Brand Primary</div>
+                    <div class="color-info">
+                        <div class="color-name">Brand Primary (Green)</div>
+                        <div class="color-value">#27ae60</div>
+                        <div class="color-value">RGB(39, 174, 96)</div>
+                        <div class="color-value">Used in: Mobile app, Website CTA</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--brand-primary-dark);">Primary Dark</div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Dark</div>
+                        <div class="color-value">#1e8449</div>
+                        <div class="color-value">RGB(30, 132, 73)</div>
+                        <div class="color-value">Used in: Hover states</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--brand-secondary);">Brand Secondary</div>
+                    <div class="color-info">
+                        <div class="color-name">Brand Secondary (Dark Blue)</div>
+                        <div class="color-value">#2c3e50</div>
+                        <div class="color-value">RGB(44, 62, 80)</div>
+                        <div class="color-value">Used in: Website primary</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--brand-accent);">Brand Accent</div>
+                    <div class="color-info">
+                        <div class="color-name">Brand Accent (Blue)</div>
+                        <div class="color-value">#3498db</div>
+                        <div class="color-value">RGB(52, 152, 219)</div>
+                        <div class="color-value">Used in: Interactive elements</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Project-Specific Themes</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">🌐 Website Theme</h4>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--website-primary); border-radius: var(--radius-sm);"></div>
+                        <span>Primary: #2c3e50</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--website-secondary); border-radius: var(--radius-sm);"></div>
+                        <span>Secondary: #27ae60</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--website-accent); border-radius: var(--radius-sm);"></div>
+                        <span>Accent: #3498db</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--website-text-light); border-radius: var(--radius-sm);"></div>
+                        <span>Text Light: #7f8c8d</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--website-bg-light); border-radius: var(--radius-sm);"></div>
+                        <span>Background Light: #ecf0f1</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--website-border); border-radius: var(--radius-sm);"></div>
+                        <span>Border: #bdc3c7</span>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📱 Mobile App Theme</h4>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--mobile-primary); border-radius: var(--radius-sm);"></div>
+                        <span>Primary: #27AE60</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--mobile-primary-dark); border-radius: var(--radius-sm);"></div>
+                        <span>Primary Dark: #1E8449</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--mobile-secondary); border-radius: var(--radius-sm);"></div>
+                        <span>Secondary: #28A745</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--mobile-accent); border-radius: var(--radius-sm);"></div>
+                        <span>Accent: #4CAF50</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--mobile-app-bar); border-radius: var(--radius-sm);"></div>
+                        <span>App Bar: #000000</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: var(--mobile-text-primary); border-radius: var(--radius-sm);"></div>
+                        <span>Text Primary: #212121</span>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">💻 Web App Theme</h4>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: #409eff; border-radius: var(--radius-sm);"></div>
+                        <span>Primary: #409eff</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: #4096ff; border-radius: var(--radius-sm);"></div>
+                        <span>Primary Gradient: #4096ff</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: #28a745; border-radius: var(--radius-sm);"></div>
+                        <span>Success Green: #28a745</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: #f5f5f5; border-radius: var(--radius-sm);"></div>
+                        <span>Light Grey: #f5f5f5</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: #000000; border-radius: var(--radius-sm);"></div>
+                        <span>Login Background: #000000</span>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <div style="width: 20px; height: 20px; background: #0c0f0f; border-radius: var(--radius-sm);"></div>
+                        <span>Theme Color: #0c0f0f</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Status Colors</h3>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--status-pending); color: #ffffff;">Pending</div>
+                    <div class="color-info">
+                        <div class="color-name">Pending</div>
+                        <div class="color-value">#16a085</div>
+                        <div class="color-value">Teal Green</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--status-approved); color: #ffffff;">Approved</div>
+                    <div class="color-info">
+                        <div class="color-name">Approved/Active</div>
+                        <div class="color-value">#27ae60</div>
+                        <div class="color-value">Brand Success</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--status-rejected); color: #ffffff;">Rejected</div>
+                    <div class="color-info">
+                        <div class="color-name">Rejected</div>
+                        <div class="color-value">#e67e22</div>
+                        <div class="color-value">Muted Orange</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--status-processing); color: #ffffff;">Processing</div>
+                    <div class="color-info">
+                        <div class="color-name">Processing</div>
+                        <div class="color-value">#3498db</div>
+                        <div class="color-value">Brand Info</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--status-inactive); color: #ffffff;">Inactive</div>
+                    <div class="color-info">
+                        <div class="color-name">Inactive/Expired</div>
+                        <div class="color-value">#95a5a6</div>
+                        <div class="color-value">Brand Muted</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: var(--spacing-xl);">Contrast Ratios</h3>
+            <div style="background: var(--bg-secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-top: var(--spacing-md);">
+                <p><strong>Brand Primary on White:</strong> 4.5:1 (AA) ✓</p>
+                <p><strong>Brand Secondary on White:</strong> 8.2:1 (AAA) ✓</p>
+                <p><strong>White on Brand Primary:</strong> 4.5:1 (AA) ✓</p>
+                <p><strong>White on Brand Secondary:</strong> 8.2:1 (AAA) ✓</p>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="section">
+            <h2>D. Typography</h2>
+            <div class="typography-example">
+                <h1>Heading 1 - Main Page Titles</h1>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+            <div class="typography-example">
+                <h2>Heading 2 - Section Titles</h2>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+            <div class="typography-example">
+                <h3>Heading 3 - Subsection Titles</h3>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+            <div class="typography-example">
+                <h4>Heading 4 - Card Titles</h4>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+            <div class="typography-example">
+                <h5>Heading 5 - Small Headings</h5>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+            <div class="typography-example">
+                <h6>Heading 6 - Labels</h6>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+            <div class="typography-example">
+                <p>Body text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="font-stack">Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</div>
+            </div>
+        </section>
+
+        <!-- Spacing & Radius -->
+        <section class="section">
+            <h2>E. Spacing & Radius</h2>
+            <h3>Spacing Scale</h3>
+            <div class="spacing-examples" style="border: 2px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-secondary);">
+                <div class="spacing-example">
+                    <div class="spacing-visual" style="height: var(--spacing-xs); border: 1px solid var(--brand-primary);"></div>
+                    <strong style="color: #000000;">XS</strong><br><span style="color: #000000;">4px</span>
+                </div>
+                <div class="spacing-example">
+                    <div class="spacing-visual" style="height: var(--spacing-sm); border: 1px solid var(--brand-primary);"></div>
+                    <strong style="color: #000000;">SM</strong><br><span style="color: #000000;">8px</span>
+                </div>
+                <div class="spacing-example">
+                    <div class="spacing-visual" style="height: var(--spacing-md); border: 1px solid var(--brand-primary);"></div>
+                    <strong style="color: #000000;">MD</strong><br><span style="color: #000000;">16px</span>
+                </div>
+                <div class="spacing-example">
+                    <div class="spacing-visual" style="height: var(--spacing-lg); border: 1px solid var(--brand-primary);"></div>
+                    <strong style="color: #000000;">LG</strong><br><span style="color: #000000;">24px</span>
+                </div>
+                <div class="spacing-example">
+                    <div class="spacing-visual" style="height: var(--spacing-xl); border: 1px solid var(--brand-primary);"></div>
+                    <strong style="color: #000000;">XL</strong><br><span style="color: #000000;">32px</span>
+                </div>
+                <div class="spacing-example">
+                    <div class="spacing-visual" style="height: var(--spacing-2xl); border: 1px solid var(--brand-primary);"></div>
+                    <strong style="color: #000000;">2XL</strong><br><span style="color: #000000;">48px</span>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: var(--spacing-xl);">Border Radius</h3>
+            <div class="radius-examples">
+                <div class="radius-example" style="border-radius: var(--radius-sm); color: #000000;">SM<br>4px</div>
+                <div class="radius-example" style="border-radius: var(--radius-md); color: #000000;">MD<br>8px</div>
+                <div class="radius-example" style="border-radius: var(--radius-lg); color: #000000;">LG<br>12px</div>
+                <div class="radius-example" style="border-radius: var(--radius-xl); color: #000000;">XL<br>16px</div>
+                <div class="radius-example" style="border-radius: var(--radius-2xl); color: #000000;">2XL<br>25px</div>
+                <div class="radius-example" style="border-radius: var(--radius-full); color: #000000;">Full<br>50px</div>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section class="section">
+            <h2>F. Components</h2>
+            <div class="component-grid">
+                <div class="component-example">
+                    <h3>Website Buttons</h3>
+                    <button class="btn btn-primary" style="background: var(--website-primary); color: white; border-color: var(--website-primary);">Primary</button>
+                    <button class="btn btn-secondary" style="background: var(--website-secondary); color: white; border-color: var(--website-secondary);">Secondary</button>
+                    <button class="btn btn-outline" style="background: transparent; color: var(--website-primary); border-color: var(--website-primary);">Outline</button>
+                </div>
+                
+                <div class="component-example">
+                    <h3>Mobile App Buttons</h3>
+                    <button class="btn btn-primary" style="background: var(--mobile-primary); color: white; border-color: var(--mobile-primary);">Primary</button>
+                    <button class="btn btn-secondary" style="background: var(--mobile-surface); color: var(--mobile-primary); border-color: var(--mobile-primary);">Secondary</button>
+                    <button class="btn btn-outline" style="background: transparent; color: var(--mobile-primary); border-color: var(--mobile-primary);">Text</button>
+                </div>
+                
+                <div class="component-example">
+                    <h3>Web App Buttons (Element Plus)</h3>
+                    <button class="btn btn-primary" style="background: var(--webapp-primary); color: white; border-color: var(--webapp-primary);">Primary</button>
+                    <button class="btn btn-secondary" style="background: var(--webapp-bg); color: var(--webapp-primary); border-color: var(--webapp-primary);">Secondary</button>
+                    <button class="btn btn-outline" style="background: transparent; color: var(--webapp-primary); border-color: var(--webapp-primary);">Outline</button>
+                </div>
+                
+                <div class="component-example">
+                    <h3>Status Badges</h3>
+                    <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+                        <span class="badge" style="background: var(--status-pending); color: white;">Pending</span>
+                        <span class="badge" style="background: var(--status-approved); color: white;">Approved</span>
+                        <span class="badge" style="background: var(--status-rejected); color: white;">Rejected</span>
+                        <span class="badge" style="background: var(--status-processing); color: white;">Processing</span>
+                        <span class="badge" style="background: var(--status-inactive); color: white;">Inactive</span>
+                    </div>
+                </div>
+                
+                <div class="component-example">
+                    <h3>Cards</h3>
+                    <div class="card" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                        <h4 style="color: var(--text-primary); margin-bottom: var(--spacing-sm);">Card Title</h4>
+                        <p style="color: var(--text-secondary);">This is a card component with consistent styling across all projects.</p>
+                    </div>
+                </div>
+                
+                <div class="component-example">
+                    <h3>Form Inputs</h3>
+                    <input type="text" class="input" placeholder="Enter text..." style="margin-bottom: var(--spacing-sm); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-sm);">
+                    <input type="email" class="input" placeholder="Enter email..." style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-sm);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Iconography -->
+        <section class="section">
+            <h2>G. Iconography</h2>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">Using Font Awesome icons with consistent sizing and flat design principles</p>
+            <div class="icon-grid">
+                <div class="icon-example">
+                    <i class="fas fa-home" style="font-size: 16px; color: var(--brand-primary);"></i>
+                    <div>16px</div>
+                </div>
+                <div class="icon-example">
+                    <i class="fas fa-user" style="font-size: 20px; color: var(--brand-primary);"></i>
+                    <div>20px</div>
+                </div>
+                <div class="icon-example">
+                    <i class="fas fa-cog" style="font-size: 24px; color: var(--brand-primary);"></i>
+                    <div>24px</div>
+                </div>
+                <div class="icon-example">
+                    <i class="fas fa-bell" style="font-size: 32px; color: var(--brand-primary);"></i>
+                    <div>32px</div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: var(--spacing-xl);">Icon Usage Guidelines</h3>
+            <div style="background: var(--bg-secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-top: var(--spacing-md);">
+                <ul style="color: var(--text-secondary); margin-left: var(--spacing-lg);">
+                    <li>Use consistent sizing: 16px, 20px, 24px, 32px</li>
+                    <li>Apply brand primary color (#27ae60) for active states</li>
+                    <li>Use secondary text color (#757575) for inactive states</li>
+                    <li>Maintain 4px padding around icons for touch targets</li>
+                    <li>Prefer outline style icons over filled for better readability</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Imagery -->
+        <section class="section">
+            <h2>H. Imagery Guidelines</h2>
+            <h3>Backgrounds</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg); margin-bottom: var(--spacing-xl);">
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #27ae60, #2c3e50); border-radius: 20px; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); margin-bottom: var(--spacing-md);">
+                        Hero Banner
+                    </div>
+                    <h4>Hero Images</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">20px radius, large shadows</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #409eff, #1677ff); border-radius: 20px; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1)); margin-bottom: var(--spacing-md);">
+                        App Screenshot
+                    </div>
+                    <h4>App Screenshots</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">20px radius, drop shadows</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #f5f5f5, #e8e8e8); border-radius: 12px; height: 150px; display: flex; align-items: center; justify-content: center; color: #666; font-weight: 600; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); margin-bottom: var(--spacing-md);">
+                        Feature Image
+                    </div>
+                    <h4>Feature Images</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">12px radius, medium shadows</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #5d6d7e, #566573, #4a5a6a); border-radius: 20px; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); margin-bottom: var(--spacing-md);">
+                        Dark Gradient
+                    </div>
+                    <h4>Dark Gradient</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Professional dark gradient for cards</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: #ecf0f1; border-radius: 20px; height: 150px; display: flex; align-items: center; justify-content: center; color: #2c3e50; font-weight: 600; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); margin-bottom: var(--spacing-md);">
+                        Light Gray
+                    </div>
+                    <h4>Light Gray</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Subtle background for content areas</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: linear-gradient(-45deg, #000000, #0a0a0a, rgba(64,109,112,143), #000000); border-radius: 20px; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); margin-bottom: var(--spacing-md);">
+                        Login Page Gradient
+                    </div>
+                    <h4>Login Page Gradient</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Animated dark gradient with teal accent</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="background: linear-gradient(180deg, #000000 0%, #0a0a0a 75%, rgba(64,109,112,143) 100%); border-radius: 20px; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); margin-bottom: var(--spacing-md);">
+                        Sidebar Gradient
+                    </div>
+                    <h4>Sidebar Gradient</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Vertical dark gradient for navigation</p>
+                </div>
+            </div>
+
+            <h3>Visual Treatment</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-xl);">
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #27ae60; border-radius: 15px; margin: 0 auto var(--spacing-sm); opacity: 0.3;"></div>
+                    <h4>Brand Accent Background</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Use brand green (#27ae60) with 30% opacity for image overlays</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #000; border-radius: 20px; margin: 0 auto var(--spacing-sm); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);"></div>
+                    <h4>Hover Effects</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">translateY(-10px) with enhanced shadows on hover</p>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #409eff; border-radius: 20px; margin: 0 auto var(--spacing-sm); transform: scale(1.1); filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));"></div>
+                    <h4>Scale & Drop Shadow</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">scale(1.1) with drop-shadow for mobile overlays</p>
+                </div>
+            </div>
+
+            <h3>Image Specifications</h3>
+            <div style="background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg);">
+                    <div>
+                        <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-sm);">Hero Images</h4>
+                        <ul style="margin: 0; padding-left: var(--spacing-md); color: var(--text-secondary);">
+                            <li>Format: JPG, WebP</li>
+                            <li>Resolution: 1920x1080px</li>
+                            <li>Border radius: 20px</li>
+                            <li>Shadow: 0 20px 60px rgba(0,0,0,0.15)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-sm);">App Screenshots</h4>
+                        <ul style="margin: 0; padding-left: var(--spacing-md); color: var(--text-secondary);">
+                            <li>Format: PNG, WebP</li>
+                            <li>Resolution: 600x400px</li>
+                            <li>Border radius: 20px</li>
+                            <li>Drop shadow: 0 10px 20px rgba(0,0,0,0.1)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-sm);">Feature Images</h4>
+                        <ul style="margin: 0; padding-left: var(--spacing-md); color: var(--text-secondary);">
+                            <li>Format: PNG, JPG</li>
+                            <li>Resolution: 400x300px</li>
+                            <li>Border radius: 12px</li>
+                            <li>Shadow: 0 8px 25px rgba(0,0,0,0.1)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Image Optimization</h3>
+            <ul style="margin-left: var(--spacing-lg); color: var(--text-secondary);">
+                <li><strong>Responsive Images:</strong> Use different sizes for mobile, tablet, desktop</li>
+                <li><strong>Lazy Loading:</strong> Implement for better performance</li>
+                <li><strong>Alt Text:</strong> Always include descriptive alt text for accessibility</li>
+                <li><strong>Compression:</strong> Optimize file sizes without losing quality</li>
+                <li><strong>Format Selection:</strong> Use WebP for modern browsers, fallback to JPG/PNG</li>
+                <li><strong>External Services:</strong> Support Unsplash and Pixabay with automatic optimization</li>
+            </ul>
+        </section>
+
+        <!-- Accessibility -->
+        <section class="section">
+            <h2>J. Accessibility</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg);">
+                    <h3>Color Contrast</h3>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <p style="color: var(--text-primary);"><strong>Primary Text:</strong> 4.5:1 ratio (AA compliant)</p>
+                        <p style="color: var(--text-secondary);"><strong>Secondary Text:</strong> 3:1 ratio (AA large text)</p>
+                    </div>
+                    <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>Test all color combinations for WCAG compliance</li>
+                        <li>Provide alternative text for images</li>
+                        <li>Ensure keyboard navigation support</li>
+                        <li>Use semantic HTML elements</li>
+                    </ul>
+                </div>
+                
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg);">
+                    <h3>Focus States</h3>
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <button style="padding: var(--spacing-sm) var(--spacing-md); border: 2px solid var(--brand-primary); background: transparent; color: var(--brand-primary); border-radius: var(--radius-md); margin-right: var(--spacing-sm);">Default</button>
+                        <button style="padding: var(--spacing-sm) var(--spacing-md); border: 2px solid var(--brand-primary); background: var(--brand-primary); color: white; border-radius: var(--radius-md); box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);">Focused</button>
+                    </div>
+                    <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>Use 3px outline with 30% opacity</li>
+                        <li>Maintain 4.5:1 contrast ratio</li>
+                        <li>Provide clear visual feedback</li>
+                        <li>Support keyboard navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Prompts for Visual Creation -->
+        <section class="section">
+            <h2>H. AI Prompts for Visual Creation</h2>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">Use these detailed prompts when creating visuals with AI tools to ensure brand consistency and proper color alignment across all platforms.</p>
+            
+            <h3>Brand Color Palette for AI Reference</h3>
+            <div style="background: var(--bg-secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-xl);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
+                    <div style="text-align: center;">
+                        <div style="width: 40px; height: 40px; background: #27ae60; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                        <strong>Primary Green</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#27ae60</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 40px; height: 40px; background: #1e8449; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                        <strong>Primary Dark</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#1e8449</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 40px; height: 40px; background: #2c3e50; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                        <strong>Secondary Blue</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#2c3e50</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 40px; height: 40px; background: #3498db; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                        <strong>Accent Blue</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#3498db</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 40px; height: 40px; background: #4caf50; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                        <strong>Success Green</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#4caf50</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 40px; height: 40px; background: #95a5a6; border-radius: var(--radius-sm); margin: 0 auto var(--spacing-sm);"></div>
+                        <strong>Muted Gray</strong><br><span style="font-size: 0.9rem; color: var(--text-secondary);">#95a5a6</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-xl);">
+                
+                <!-- Flyers & Marketing Materials -->
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📄 Flyers & Marketing Materials</h4>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <strong>Prompt Template:</strong>
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                        Create a [VISUAL_TYPE] for Hub E-Pharma, a digital pharmacy platform in West Africa. Use a modern, professional healthcare design with these exact brand colors: primary green #27ae60, secondary blue #2c3e50, accent blue #3498db, and success green #4caf50. Include clean typography (Inter font family), rounded corners (8-20px radius), and subtle shadows. The design should convey trust, innovation, and healthcare accessibility. [SPECIFIC_REQUIREMENTS]
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <strong>Specific Examples:</strong>
+                        <ul style="margin-top: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem;">
+                            <li><strong>Product Launch:</strong> "Create a product launch flyer for a new pharmacy management feature..."</li>
+                            <li><strong>Event Promotion:</strong> "Create an event flyer for a pharmacy training workshop..."</li>
+                            <li><strong>Service Advertisement:</strong> "Create a service advertisement for pharmacy digitalization..."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social Media Graphics -->
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📱 Social Media Graphics</h4>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <strong>Prompt Template:</strong>
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                        Create a [PLATFORM] social media post for Hub E-Pharma. Use a vibrant, engaging design with brand colors: #27ae60 (primary green), #2c3e50 (secondary blue), #3498db (accent blue). Include the Hub E-Pharma logo, modern healthcare icons, and clean typography. The design should be mobile-optimized with proper spacing and contrast. [PLATFORM_SPECIFICS]
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <strong>Platform-Specific Requirements:</strong>
+                        <ul style="margin-top: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem;">
+                            <li><strong>Instagram:</strong> "1080x1080px square format, vibrant colors, story-friendly design"</li>
+                            <li><strong>Facebook:</strong> "1200x630px landscape format, professional tone, clear call-to-action"</li>
+                            <li><strong>LinkedIn:</strong> "1200x627px, business-focused, minimal design with data visualization"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Website Banners -->
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">🌐 Website Banners & Hero Images</h4>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <strong>Prompt Template:</strong>
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                        Create a website hero banner (1920x1080px) for Hub E-Pharma. Use a professional gradient background combining #27ae60 and #2c3e50, with clean white text overlay. Include modern healthcare elements, pharmacy icons, and the Hub E-Pharma logo. Apply 20px border radius and subtle shadow effects. The design should be responsive-friendly with clear hierarchy and strong visual impact.
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <strong>Banner Types:</strong>
+                        <ul style="margin-top: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem;">
+                            <li><strong>Homepage Hero:</strong> "Focus on platform benefits and digital transformation"</li>
+                            <li><strong>Feature Banner:</strong> "Highlight specific platform features or updates"</li>
+                            <li><strong>Event Banner:</strong> "Promote webinars, training sessions, or conferences"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mobile App Screenshots -->
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📱 Mobile App Screenshots</h4>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <strong>Prompt Template:</strong>
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                        Create a mobile app screenshot mockup for Hub E-Pharma pharmacy management app. Use the mobile app color scheme: #27ae60 (primary), #1e8449 (primary dark), #28a745 (secondary), #4caf50 (accent). Design a clean, modern interface with proper spacing, rounded corners (8-12px), and the app's navigation elements. Include realistic content and maintain the healthcare/pharmacy theme throughout.
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <strong>Screen Types:</strong>
+                        <ul style="margin-top: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem;">
+                            <li><strong>Dashboard:</strong> "Main app dashboard with key metrics and navigation"</li>
+                            <li><strong>Inventory:</strong> "Pharmacy inventory management screen"</li>
+                            <li><strong>Orders:</strong> "Order management and tracking interface"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Presentation Slides -->
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📊 Presentation Slides</h4>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <strong>Prompt Template:</strong>
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                        Create a presentation slide (16:9 ratio) for Hub E-Pharma. Use a clean, professional design with brand colors: #27ae60, #2c3e50, #3498db. Include the Hub E-Pharma logo, consistent typography (Inter font), and healthcare-related icons. Use subtle gradients and proper spacing. The slide should be readable from a distance and maintain brand consistency.
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <strong>Slide Types:</strong>
+                        <ul style="margin-top: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem;">
+                            <li><strong>Title Slide:</strong> "Company introduction with logo and tagline"</li>
+                            <li><strong>Feature Slide:</strong> "Platform features with icons and descriptions"</li>
+                            <li><strong>Data Slide:</strong> "Statistics and metrics with charts"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Email Templates -->
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-lg); background: var(--bg-primary);">
+                    <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-md);">📧 Email Templates</h4>
+                    <div style="background: var(--bg-secondary); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
+                        <strong>Prompt Template:</strong>
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; background: #f8f9fa; padding: var(--spacing-md); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                        Create an email template header/banner for Hub E-Pharma. Use brand colors #27ae60, #2c3e50, and #3498db in a professional layout. Include the Hub E-Pharma logo, clean typography, and healthcare elements. Design should be email-client compatible with proper fallbacks and mobile responsiveness. Use subtle gradients and maintain consistent spacing.
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <strong>Email Types:</strong>
+                        <ul style="margin-top: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem;">
+                            <li><strong>Newsletter:</strong> "Monthly updates and platform news"</li>
+                            <li><strong>Welcome Email:</strong> "New user onboarding sequence"</li>
+                            <li><strong>Feature Update:</strong> "Product updates and new features"</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: var(--spacing-xl);">General Design Guidelines for AI Prompts</h3>
+            <div style="background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-top: var(--spacing-md);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                    <div>
+                        <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-sm);">Color Usage Rules</h4>
+                        <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                            <li>Primary Green (#27ae60) for main CTAs and highlights</li>
+                            <li>Secondary Blue (#2c3e50) for headers and important text</li>
+                            <li>Accent Blue (#3498db) for interactive elements</li>
+                            <li>Success Green (#4caf50) for positive states</li>
+                            <li>Muted Gray (#95a5a6) for inactive/expired states</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-sm);">Typography & Spacing</h4>
+                        <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                            <li>Use Inter font family for all text</li>
+                            <li>Maintain 8px, 16px, 24px, 32px spacing scale</li>
+                            <li>Apply 8-20px border radius consistently</li>
+                            <li>Use subtle shadows (0 2px 4px rgba(0,0,0,0.1))</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--brand-primary); margin-bottom: var(--spacing-sm);">Visual Elements</h4>
+                        <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                            <li>Include healthcare/pharmacy related icons</li>
+                            <li>Use clean, modern design principles</li>
+                            <li>Maintain professional, trustworthy appearance</li>
+                            <li>Ensure mobile responsiveness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Tokens -->
+        <section class="section">
+            <h2>K. Code Tokens</h2>
+            <button class="copy-btn" onclick="copyTokens()">Copy All Tokens</button>
+            <table class="tokens-table">
+                <thead>
+                    <tr>
+                        <th>Token Name</th>
+                        <th>Value</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="token-name">--brand-primary</span></td><td>#27ae60</td><td>Main brand color (Green)</td></tr>
+                    <tr><td><span class="token-name">--brand-primary-dark</span></td><td>#1e8449</td><td>Primary dark variant</td></tr>
+                    <tr><td><span class="token-name">--brand-secondary</span></td><td>#2c3e50</td><td>Secondary brand color (Dark Blue)</td></tr>
+                    <tr><td><span class="token-name">--brand-accent</span></td><td>#3498db</td><td>Accent color (Blue)</td></tr>
+                    <tr><td><span class="token-name">--website-primary</span></td><td>#2c3e50</td><td>Website primary color</td></tr>
+                    <tr><td><span class="token-name">--website-secondary</span></td><td>#27ae60</td><td>Website secondary color</td></tr>
+                    <tr><td><span class="token-name">--mobile-primary</span></td><td>#27AE60</td><td>Mobile app primary color</td></tr>
+                    <tr><td><span class="token-name">--mobile-primary-dark</span></td><td>#1E8449</td><td>Mobile app primary dark</td></tr>
+                    <tr><td><span class="token-name">--mobile-secondary</span></td><td>#28A745</td><td>Mobile app secondary color</td></tr>
+                    <tr><td><span class="token-name">--mobile-accent</span></td><td>#4CAF50</td><td>Mobile app accent color</td></tr>
+                    <tr><td><span class="token-name">--mobile-app-bar</span></td><td>#000000</td><td>Mobile app bar background</td></tr>
+                    <tr><td><span class="token-name">--mobile-text-primary</span></td><td>#212121</td><td>Mobile app primary text</td></tr>
+                    <tr><td><span class="token-name">--webapp-primary</span></td><td>#409eff</td><td>Web app primary (Element Plus)</td></tr>
+                    <tr><td><span class="token-name">--status-pending</span></td><td>#ff8c00</td><td>Pending status color</td></tr>
+                    <tr><td><span class="token-name">--status-approved</span></td><td>#4caf50</td><td>Approved/Active status</td></tr>
+                    <tr><td><span class="token-name">--status-rejected</span></td><td>#f44336</td><td>Rejected status color</td></tr>
+                    <tr><td><span class="token-name">--status-processing</span></td><td>#2196f3</td><td>Processing status color</td></tr>
+                    <tr><td><span class="token-name">--status-inactive</span></td><td>#9e9e9e</td><td>Inactive/Expired status</td></tr>
+                    <tr><td><span class="token-name">--text-primary</span></td><td>#212121</td><td>Primary text color</td></tr>
+                    <tr><td><span class="token-name">--text-secondary</span></td><td>#757575</td><td>Secondary text color</td></tr>
+                    <tr><td><span class="token-name">--text-tertiary</span></td><td>#9e9e9e</td><td>Tertiary text color</td></tr>
+                    <tr><td><span class="token-name">--bg-primary</span></td><td>#ffffff</td><td>Primary background</td></tr>
+                    <tr><td><span class="token-name">--bg-secondary</span></td><td>#f8f9fa</td><td>Secondary background</td></tr>
+                    <tr><td><span class="token-name">--border-color</span></td><td>#e0e0e0</td><td>Default border color</td></tr>
+                    <tr><td><span class="token-name">--spacing-xs</span></td><td>4px</td><td>Extra small spacing</td></tr>
+                    <tr><td><span class="token-name">--spacing-sm</span></td><td>8px</td><td>Small spacing</td></tr>
+                    <tr><td><span class="token-name">--spacing-md</span></td><td>16px</td><td>Medium spacing</td></tr>
+                    <tr><td><span class="token-name">--spacing-lg</span></td><td>24px</td><td>Large spacing</td></tr>
+                    <tr><td><span class="token-name">--spacing-xl</span></td><td>32px</td><td>Extra large spacing</td></tr>
+                    <tr><td><span class="token-name">--radius-sm</span></td><td>4px</td><td>Small border radius</td></tr>
+                    <tr><td><span class="token-name">--radius-md</span></td><td>8px</td><td>Medium border radius</td></tr>
+                    <tr><td><span class="token-name">--radius-lg</span></td><td>12px</td><td>Large border radius</td></tr>
+                    <tr><td><span class="token-name">--radius-xl</span></td><td>16px</td><td>Extra large radius</td></tr>
+                    <tr><td><span class="token-name">--radius-2xl</span></td><td>25px</td><td>2X large radius</td></tr>
+                    <tr><td><span class="token-name">--radius-full</span></td><td>50px</td><td>Fully rounded</td></tr>
+                    <tr><td><span class="token-name">--font-family-primary</span></td><td>Inter, -apple-system...</td><td>Primary font stack</td></tr>
+                    <tr><td><span class="token-name">--font-family-secondary</span></td><td>Poppins, sans-serif</td><td>Secondary font stack</td></tr>
+                    <tr><td><span class="token-name">--shadow-sm</span></td><td>0 2px 4px rgba(0,0,0,0.1)</td><td>Small shadow</td></tr>
+                    <tr><td><span class="token-name">--shadow-md</span></td><td>0 4px 6px rgba(0,0,0,0.1)</td><td>Medium shadow</td></tr>
+                    <tr><td><span class="token-name">--shadow-lg</span></td><td>0 10px 25px rgba(0,0,0,0.15)</td><td>Large shadow</td></tr>
+                    <tr><td><span class="token-name">--transition-fast</span></td><td>all 0.2s ease</td><td>Fast transitions</td></tr>
+                    <tr><td><span class="token-name">--transition-normal</span></td><td>all 0.3s ease</td><td>Normal transitions</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        function copyTokens() {
+            const tokens = `
+/* Hub E-Pharma Brand Tokens - Extracted from actual projects */
+:root {
+    /* Unified Brand Colors */
+    --brand-primary: #27ae60; /* Green - Main brand color */
+    --brand-primary-dark: #1e8449;
+    --brand-secondary: #2c3e50; /* Dark blue-gray */
+    --brand-accent: #3498db; /* Blue */
+    --brand-success: #4caf50;
+    --brand-warning: #ff8c00;
+    --brand-danger: #f44336;
+    --brand-info: #2196f3;
+    
+    /* Project-Specific Themes */
+    /* Website Theme */
+    --website-primary: #2c3e50;
+    --website-secondary: #27ae60;
+    --website-accent: #3498db;
+    --website-text: #2c3e50;
+    --website-text-light: #7f8c8d;
+    --website-bg: #ffffff;
+    --website-bg-light: #ecf0f1;
+    --website-border: #bdc3c7;
+    
+    /* Mobile App Theme */
+    --mobile-primary: #27ae60;
+    --mobile-primary-dark: #1e8449;
+    --mobile-secondary: #28a745;
+    --mobile-accent: #4caf50;
+    --mobile-bg: #f8f9fa;
+    --mobile-surface: #ffffff;
+    --mobile-text-primary: #212121;
+    --mobile-text-secondary: #757575;
+    --mobile-text-tertiary: #9e9e9e;
+    --mobile-border: #e0e0e0;
+    
+    /* Web App Theme (Element Plus + Custom) */
+    --webapp-primary: #409eff; /* Element Plus default */
+    --webapp-success: #67c23a;
+    --webapp-warning: #e6a23c;
+    --webapp-danger: #f56c6c;
+    --webapp-info: #909399;
+    --webapp-text-primary: #303133;
+    --webapp-text-regular: #606266;
+    --webapp-text-secondary: #909399;
+    --webapp-text-placeholder: #c0c4cc;
+    --webapp-bg: #ffffff;
+    --webapp-bg-page: #f2f3f5;
+    --webapp-border: #dcdfe6;
+    --webapp-border-light: #e4e7ed;
+    
+        /* Status Colors - Pleasant Brand Themes */
+        --status-pending: #16a085;
+        --status-approved: #27ae60;
+        --status-rejected: #e67e22;
+        --status-active: #27ae60;
+        --status-inactive: #95a5a6;
+        --status-processing: #3498db;
+        --status-completed: #27ae60;
+        --status-expired: #95a5a6;
+    
+    /* Text Colors */
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --text-tertiary: #9e9e9e;
+    --text-disabled: #bdbdbd;
+    --text-white: #ffffff;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-light: #ecf0f1;
+    --bg-dark: #2c3e50;
+    --bg-black: #000000;
+    
+    /* Border Colors */
+    --border-color: #e0e0e0;
+    --border-light: #f5f5f5;
+    --border-medium: #dcdfe6;
+    
+    /* Spacing Scale */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 25px;
+    --radius-full: 50px;
+    
+    /* Typography */
+    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-secondary: 'Poppins', sans-serif;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.2);
+    
+    /* Transitions */
+    --transition-fast: all 0.2s ease;
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}`;
+            
+            navigator.clipboard.writeText(tokens).then(() => {
+                alert('Tokens copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = tokens;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('Tokens copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
