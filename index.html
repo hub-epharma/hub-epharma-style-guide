@@ -809,6 +809,19 @@
             .section:nth-of-type(10) { page-break-before: avoid; }
             .section:nth-of-type(11) { page-break-before: avoid; }
         }
+        
+        /* Login page gradient animation for previews */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -889,49 +902,49 @@
             <div class="logo-showcase" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-xl);">
                 <div class="logo-example">
                     <div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid var(--border-color);">
-                        <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                        <img src="images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
                     <p><strong>Primary Logo</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #ffffff; border-radius: var(--radius-sm); border: 1px solid #ccc;"></div><span>Background: #ffffff (White)</span></div>Min size: 120px width</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: var(--bg-dark); padding: 30px; border-radius: 8px;">
-                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                        <img src="images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
                     <p><strong>On Dark Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #2c3e50; border-radius: var(--radius-sm);"></div><span>Background: #2c3e50 (Dark Blue-Gray)</span></div>Use original version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: var(--brand-primary); padding: 30px; border-radius: 8px;">
-                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
+                        <img src="images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
                     </div>
                     <p><strong>On Brand Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #27ae60; border-radius: var(--radius-sm);"></div><span>Background: #27ae60 (Primary Green)</span></div>Use white version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #000000; padding: 30px; border-radius: 8px;">
-                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                        <img src="images/logo.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
                     <p><strong>On Black Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #000000; border-radius: var(--radius-sm);"></div><span>Background: #000000 (Black)</span></div>Use original version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: linear-gradient(135deg, #2c3e50, #27ae60); padding: 30px; border-radius: 8px;">
-                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
+                        <img src="images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
                     </div>
                     <p><strong>On Gradient Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: linear-gradient(135deg, #2c3e50, #27ae60); border-radius: var(--radius-sm);"></div><span>Background: #2c3e50 → #27ae60 (Gradient)</span></div>Use white version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 2px solid var(--brand-primary);">
-                        <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                        <img src="images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
                     <p><strong>On Light Background with Border</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #f8f9fa; border-radius: var(--radius-sm); border: 1px solid #ccc;"></div><span>Background: #f8f9fa (Light Gray)</span></div>Use white text version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #d35400; padding: 30px; border-radius: 8px;">
-                        <img src="../hub-epharma-website/public/images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
+                        <img src="images/logo-white-text.png" alt="Hub E-Pharma Logo" style="width: 100%; max-width: 200px; height: auto;">
                     </div>
                     <p><strong>On Dark Orange Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #d35400; border-radius: var(--radius-sm);"></div><span>Background: #d35400 (Dark Orange)</span></div>Use original version</p>
                 </div>
                 <div class="logo-example">
                     <div style="background: #2c3e50; padding: 30px; border-radius: 8px;">
-                        <img src="../hub-epharma-website/public/images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
+                        <img src="images/logo.png" alt="Hub E-Pharma Logo" style="filter: brightness(0) invert(1);">
                     </div>
                     <p><strong>On Dark Blue-Gray Background</strong><br><div style="display: flex; gap: var(--spacing-sm); margin: var(--spacing-sm) 0; align-items: center;"><div style="width: 20px; height: 20px; background: #2c3e50; border-radius: var(--radius-sm);"></div><span>Background: #2c3e50 (Dark Blue-Gray)</span></div>Use white logo</p>
                 </div>
@@ -1418,6 +1431,59 @@
                 <li><strong>Format Selection:</strong> Use WebP for modern browsers, fallback to JPG/PNG</li>
                 <li><strong>External Services:</strong> Support Unsplash and Pixabay with automatic optimization</li>
             </ul>
+
+            <h3>Background Templates</h3>
+            <div style="background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg);">
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">Interactive background templates demonstrating each gradient style. Perfect for presentations, print materials, and design mockups.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+                    <a href="backgrounds/background-hero-images.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: linear-gradient(135deg, #27ae60, #2c3e50); border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem;">Hero Images</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">Hero Banner Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Green to dark gradient for hero sections</p>
+                    </a>
+                    
+                    <a href="backgrounds/background-app-screenshots.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: linear-gradient(135deg, #409eff, #1677ff); border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem;">App Screenshots</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">App Screenshot Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Blue gradient for mobile app displays</p>
+                    </a>
+                    
+                    <a href="backgrounds/background-feature-images.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: linear-gradient(135deg, #f5f5f5, #e8e8e8); border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: #666; font-weight: 600; font-size: 0.9rem;">Feature Images</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">Feature Image Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Light gradient for content areas</p>
+                    </a>
+                    
+                    <a href="backgrounds/background-dark-gradient.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: linear-gradient(135deg, #5d6d7e, #566573, #4a5a6a); border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem;">Dark Gradient</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">Dark Gradient Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Professional dark gradient for cards</p>
+                    </a>
+                    
+                    <a href="backgrounds/background-light-gray.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: #ecf0f1; border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Light Gray</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">Light Gray Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Subtle background for content areas</p>
+                    </a>
+                    
+                    <a href="backgrounds/background-login-page.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: linear-gradient(-45deg, #000000, #0a0a0a, rgba(64,109,112,143), #000000); background-size: 400% 400%; animation: gradientShift 36s ease-in-out infinite; border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem;">Login Page</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">Login Page Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Animated dark gradient with teal accent</p>
+                    </a>
+                    
+                    <a href="backgrounds/background-sidebar-gradient.html" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); transition: all 0.2s ease; background: white;">
+                        <div style="background: linear-gradient(180deg, #000000 0%, #0a0a0a 75%, rgba(64,109,112,143) 100%); border-radius: 8px; height: 80px; margin-bottom: var(--spacing-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem;">Sidebar Gradient</div>
+                        <h4 style="margin: 0 0 var(--spacing-xs) 0; color: var(--brand-primary);">Sidebar Background</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Vertical gradient for navigation</p>
+                    </a>
+                </div>
+                
+                <div style="margin-top: var(--spacing-lg); padding: var(--spacing-md); background: rgba(39, 174, 96, 0.1); border-radius: var(--radius-sm); border-left: 4px solid var(--brand-primary);">
+                    <p style="margin: 0; color: var(--text-primary); font-size: 0.9rem;"><strong>💡 Usage Tip:</strong> Each template opens in a new tab with exact dimensions (8.5" × 11") and includes hover effects. Right-click and "Save As" to download, or use Print to PDF for high-quality exports.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Accessibility -->
